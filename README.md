@@ -12,7 +12,7 @@ This challenge (set by Makers Academy) was to write a little Twitter clone that 
 
 # Notes:
 
-* Makers sign up to chitter with their email, password, name and a user name (e.g. sam@makersacademy.com, s3cr3t, Samuel Russell Hampden Joseph, tansaku).
+* Makers sign up to chitter with their email, password, name and a user name
 * The username and email are unique.
 * Peeps (posts to chitter) have the name of the maker and their user handle.
 * Use bcrypt to secure the passwords.
