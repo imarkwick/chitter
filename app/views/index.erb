@@ -1,1 +1,14 @@
-<h1>Simon Says....</h1>
+<h1>Simon says....</h1>
+
+<ul>
+	<% @posts.each do |post| %>
+		<li><%= post.story %></li>
+	<% end %>
+</ul>
+
+<div id="new-post">
+	<form action="/links" method="post">
+		Post: <input type="text" name="story">
+		<input type="submit" value="post">
+	</form>
+</div>

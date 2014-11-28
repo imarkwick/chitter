@@ -8,6 +8,11 @@
 	</head>
 
 	<body>
+
+	<% if current_user %>
+		Welcome, <%= current_user.name %>
+	<% end %>
+
 	  <%= yield %>
 	</body>
 	
