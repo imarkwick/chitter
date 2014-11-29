@@ -8,14 +8,20 @@ feature "User signs up" do
 		expect(User.first.name).to eq("Izzy")
 	end
 
+	scenario "with a password that doesn't match" do
+		lambda { sign_up('test', 'abc@test.com', 'pass', 'wrong') }.should change(User, :count).by(0)
+	end
+
 	def sign_up(name = "Izzy",
 							email = "izzy@example.com",
-							password = "oranges")
+							password = "oranges",
+							password_confirmation = "oranges")
 		visit 'users/new'
 		expect(page.status_code).to eq(200)
 		fill_in :name, :with => name
 		fill_in :email, :with => email
 		fill_in :password, :with => password
+		fill_in :password_confirmation, :with => password_confirmation
 		click_button "Sign up"
 	end
 end
