@@ -3,17 +3,23 @@
 <html>
 
 	<head>
-		<title>Simon Says....</title>
+	
+			<title>Simon Says....</title>
 	  <link rel="stylesheet" type="text/css" href="/css/application.css">  
 	</head>
 
 	<body>
 
-	<% if current_user %>
-		Welcome, <%= current_user.name %>
-	<% end %>
+		<% if current_user %>
+			Welcome, <%= current_user.name %>
+		<% end %>
 
-	  <%= yield %>
+		<% if flash[:notice] %>
+			<div id="notice"><%= flash[:notice] %></div>
+		<% end %>
+
+		<%= yield %>
+	
 	</body>
 	
 </html>
