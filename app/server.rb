@@ -14,4 +14,4 @@ use Rack::Flash
 
 require_relative 'controllers/users'
 require_relative 'controllers/posts'
-
+require_relative 'controllers/sessions'

@@ -26,6 +26,25 @@ end
 
 feature "User signs in" do
 
+	before(:each) do
+		User.create(:name => "testing", :email => "test@test.com",
+								:password => "test", :password_confirmation => "test")
+	end
+
+	scenario "with correct credentials" do
+		visit '/'
+		expect(page).not_to have_content("Welcome, testing")
+		sign_in('test@test.com', "test")
+		expect(page).to have_content("Welcome, testing")
+	end
+
+	scenario "with incorrect credentials" do
+		visit '/'
+		expect(page).not_to have_content("Welcome, testing")
+		sign_in('test@test.com', 'wrong')
+		expect(page).not_to have_content("Welcome, testing")
+	end
+
 end
 
 feature "User signs out" do
