@@ -20,7 +20,7 @@ end
 post '/links' do
 	story = params["story"]
 	Post.create(:story => story)
-	redirect to('/')
+	redirect to ('/')
 end
 
 get '/users/new' do
@@ -28,16 +28,16 @@ get '/users/new' do
 	erb :"users/new"
 end
 
-post '/users' do
+post '/users/new' do
 	@user = User.create(:name => params[:name],
 							:email => params[:email],
 							:password => params[:password],
 							:password_confirmation => params[:password_confirmation])
 	if @user.save
 		session[:user_id] = @user.id
-		redirect to('/')
+		redirect to ('/')
 	else
-		flash[:notice] = "Your passwords don't match"
+		flash.now[:errors] = @user.errors.full_messages
 		erb :"users/new"
 	end
 end

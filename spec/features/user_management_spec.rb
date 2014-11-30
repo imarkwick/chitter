@@ -1,29 +1,33 @@
 require 'spec_helper'
+require_relative 'helpers/session'
+
+include SessionHelpers
 
 feature "User signs up" do
 	
-	scenario "when being a new user visiting the site" do
+	scenario "when being logged out" do
 		expect{ sign_up }.to change(User, :count).by(1)
 		expect(page).to have_content("Welcome, Izzy")
 		expect(User.first.name).to eq("Izzy")
 	end
 
-	scenario "with a password that doesn't match" do
-		lambda { sign_up('test', 'abc@test.com', 'pass', 'wrong') }.should change(User, :count).by(0)
-		expect(current_path).to eq('/users')
-		expect(page).to have_content("Your passwords don't match")
+	scenario "with an email that is already registered" do
+		expect{ sign_up }.to change(User, :count).by(1)
+		expect{ sign_up }.to change(User, :count).by(0)
+		expect(page).to have_content("This email is already taken")
 	end
 
-	def sign_up(name = "Izzy",
-							email = "izzy@example.com",
-							password = "oranges",
-							password_confirmation = "oranges")
-		visit 'users/new'
-		expect(page.status_code).to eq(200)
-		fill_in :name, :with => name
-		fill_in :email, :with => email
-		fill_in :password, :with => password
-		fill_in :password_confirmation, :with => password_confirmation
-		click_button "Sign up"
+	scenario "with a password that doesn't match" do
+		lambda { sign_up('test', 'abc@test.com', 'pass', 'wrong') }.should change(User, :count).by(0)
+		expect(current_path).to eq('/users/new')
+		expect(page).to have_content("Sorry, there were the following problems with your information.")
 	end
+end
+
+feature "User signs in" do
+
+end
+
+feature "User signs out" do
+
 end
