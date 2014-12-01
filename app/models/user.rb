@@ -14,7 +14,7 @@ class User
 	attr_accessor :password_confirmation
 
 	validates_uniqueness_of :email
-	validates_confirmation_of :password
+	validates_confirmation_of :password, :message => "Your passwords don't match"
 
 	def password=(password)
 		@password = password

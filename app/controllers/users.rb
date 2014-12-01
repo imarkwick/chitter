@@ -35,7 +35,13 @@ get '/users/reset_password/:token' do
 end
 
 post '/users/reset_password' do
-	user = User.first(password_token: params[:password_token])
-	user.update(password: params[:password], password_confirmation: params[:password_confirmation], password_token: nil)
-	'Password updated'
+	@user = User.first(password_token: params[:password_token])
+	if params[:password] == params[:password_confirmation]
+		@user.update(password: params[:password], password_confirmation: params[:password_confirmation], password_token: nil)
+		redirect to ('/sessions/new')
+		'Password updated'
+	else
+		flash.now[:errors] = ["Your passwords don't match"]
+		erb :"users/new_password"
+	end
 end
