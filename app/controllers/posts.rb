@@ -8,7 +8,3 @@ post '/posts' do
 	Post.create(:story => story)
 	redirect to ('/')
 end
-
-get '/posts/new' do
-	erb :"posts/new"
-end
