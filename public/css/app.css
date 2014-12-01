@@ -1,0 +1,71 @@
+header {
+	height: 40px;
+	background-color: #000000;
+	color: #FFFFFF;
+	display: flex;
+	padding: 0.20px;
+	text-decoration: none;
+}
+
+header > * {
+	margin: auto 0;
+}
+
+header #logo {
+	font-family: 'Open Sans Condensed', sans-serif;
+	display: flex;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+header a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+header #user-posts {
+	flex: 1;
+	-webkit-flex: 1;
+	text-align: right;
+	display: inline-block;
+	padding-right: 10px;
+}
+
+header #user-posts #welcome-message {
+	font-size: 14px;
+}
+
+#posts-container {
+	background-color: #000000;
+	color: #FFFFFF;
+	border: 2px solid white;
+	margin: 40px;
+	width: 80%;
+	text-align: center;
+
+}
+
+.button {
+	display: inline-black;
+	width: 100px;
+	cursor: pointer;
+	font-size: 10px;
+	background-color: #000000;
+	border: 1px solid white;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 5px 5px;
+	border-radius: 4px;
+}	
+
+body {
+	color: #000000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+html, body {
+	height: 100%;
+}

@@ -3,8 +3,12 @@ get '/' do
 	erb :index
 end
 
-post '/links' do
+post '/posts' do
 	story = params["story"]
 	Post.create(:story => story)
 	redirect to ('/')
+end
+
+get '/posts/new' do
+	erb :"posts/new"
 end

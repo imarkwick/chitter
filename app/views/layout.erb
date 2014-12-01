@@ -6,16 +6,24 @@
 	
 			<title>Simon Says....</title>
 
-	  <link rel="stylesheet" type="text/css" href="/css/application.css"> 
+	  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+	  <link rel="stylesheet" type="text/css" href="/css/app.css">
 
 	</head>
 
 	<body>
 
-	<%= partial :header %>
-	<%= partial :flash %>
+	<div class='wrap'>
+
+		<%= partial :header %>
+		<%= partial :flash %>
+
+		<div id='posts-container'></div>
 
 		<%= yield %>
+
+		<div class='push'></div>
+	</div>
 	
 	</body>
 	

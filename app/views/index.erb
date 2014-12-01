@@ -1,14 +1,9 @@
-<h1>Simon says....</h1>
+<div id='posts-container'>
 
-<ul>
+<ul id='posts'>
 	<% @posts.each do |post| %>
 		<li><%= post.story %></li>
 	<% end %>
 </ul>
 
-<div id="new-post">
-	<form action="/links" method="post">
-		Post: <input type="text" name="story">
-		<input type="submit" value="post">
-	</form>
 </div>
