@@ -99,3 +99,10 @@ body {
 html, body {
 	height: 100%;
 }
+
+
+#post-box {
+	width: 200px;
+	height: 150px;
+	font-size: 20px;
+}

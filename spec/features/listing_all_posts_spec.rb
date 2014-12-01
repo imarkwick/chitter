@@ -8,6 +8,6 @@ feature 'user browses the list of posts' do
 
 	scenario "when opening the home page" do
 		visit '/'
-		expect(page).to have_content("Simon says....")
+		expect(page).to have_content("Simon says")
 	end
 end
