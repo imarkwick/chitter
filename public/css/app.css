@@ -76,6 +76,31 @@ li {
 	margin-bottom: 10px;
 }
 
+h1 {
+	font-size: 18px;
+	margin: 10px;
+}
+
+form {
+	text-align: left;
+	margin: 10px;
+	text-align: center;
+}
+
+form input[type="text"], form input[type="password"] {
+	border: 1px solid white;
+	font-size: 14px;
+	width: 400px;
+}
+
+form input[type="text"] {
+	margin: 10px;
+}
+
+form input[type="password"] {
+	margin: 10px;
+}
+
 .button {
 	display: inline-black;
 	width: 100px;
@@ -87,6 +112,7 @@ li {
 	color: #FFFFFF;
 	padding: 5px 5px;
 	border-radius: 4px;
+	margin: 10px;
 }	
 
 body {
@@ -100,9 +126,16 @@ html, body {
 	height: 100%;
 }
 
-
-#post-box {
-	width: 200px;
-	height: 150px;
+#post {
+	width: 250px;
+	height: 100px;
 	font-size: 20px;
+	opacity: 0.6;
+}
+
+#post:hover {
+	width: 250px;
+	height: 100px;
+	font-size: 20px;
+	opacity: 0.8z;
 }

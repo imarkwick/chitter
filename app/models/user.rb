@@ -4,6 +4,8 @@ class User
 
 	include DataMapper::Resource
 
+	# has n, :posts
+
 	property :id, Serial
 	property :name, String 
 	property :email, String, :unique => true, :message => "This email is already taken"

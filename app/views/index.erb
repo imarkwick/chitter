@@ -1,9 +1,9 @@
 <div id='posts-container'>
 
 <ul id='posts'>
-	<% @posts.each do |post| %>
+	<% @posts.reverse.each do |post| %>
 		<li><%= post.story %></li>
-	<% end %>
+<% end %>
 </ul>
 
 </div>
