@@ -5,6 +5,6 @@ class Post
 	# belongs_to 	:user	
 
 	property 		:id, 					Serial
-	property 		:story, 			String
+	property 		:story, 			Text
 
 end
