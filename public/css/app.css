@@ -74,6 +74,7 @@ li {
 	margin-left: 28%;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	padding: 20px;
 }
 
 h1 {
@@ -105,7 +106,7 @@ form input[type="password"] {
 	display: inline-black;
 	width: 100px;
 	cursor: pointer;
-	font-size: 10px;
+	font-size: 12px;
 	background-color: #000000;
 	border: 1px solid white;
 	text-align: center;
@@ -127,15 +128,15 @@ html, body {
 }
 
 #post {
-	width: 250px;
-	height: 100px;
+	width: 500px;
+	height: 120px;
 	font-size: 20px;
 	opacity: 0.6;
 }
 
 #post:hover {
-	width: 250px;
-	height: 100px;
+	width: 500px;
+	height: 120px;
 	font-size: 20px;
 	opacity: 0.8z;
 }
