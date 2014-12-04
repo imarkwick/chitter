@@ -116,6 +116,10 @@ form input[type="password"] {
 	margin: 10px;
 }	
 
+.flash {
+	text-align: center;
+}
+
 body {
 	color: #000000;
 	font-family: 'Open Sans Condensed', sans-serif;
