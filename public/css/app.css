@@ -123,6 +123,12 @@ form input[type="password"] {
 	margin-left: 36%;
 }
 
+/*#notice {
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 50px;
+}*/
+
 body {
 	color: #000000;
 	font-family: 'Open Sans Condensed', sans-serif;
