@@ -2,7 +2,8 @@
 
 	<ul id='posts'>
 		<% @posts.reverse.each do |post| %>
-			<li><p style="background-color: yellow"><%= post.story %></p></li>
+			<li><p><%= post.story %>
+			<id='username'>@<%= post.user.name %></p></li></id='username'>
 	<% end %>
 	</ul>
 	
