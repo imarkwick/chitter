@@ -78,6 +78,11 @@ li {
 	padding: 20px;
 }
 
+#username {
+	margin-top: 20px;
+	color: grey;
+}
+
 h1 {
 	font-size: 18px;
 	margin: 10px;
