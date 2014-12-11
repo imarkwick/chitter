@@ -16,4 +16,12 @@ module SessionHelpers
 		fill_in 'password', :with => password
 		click_button 'Sign in'
 	end
+
+		def add_post(story)
+			visit '/posts/new'
+			within('#user-input') do
+			fill_in 'story', :with => story
+			click_button 'post'
+		end
+	end
 end

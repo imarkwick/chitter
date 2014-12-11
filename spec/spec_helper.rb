@@ -4,6 +4,7 @@ require './app/server'
 require 'capybara/rspec'
 require 'database_cleaner'
 
+
 Capybara.app = Sinatra::Application
 
 RSpec.configure do |config|
@@ -26,4 +27,3 @@ RSpec.configure do |config|
 		DatabaseCleaner.clean
 	end
 end
-
