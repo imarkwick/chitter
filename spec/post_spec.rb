@@ -6,7 +6,7 @@ describe Post do
 		expect(Post.count).to eq(0)
 		Post.create(story: "Hello world!")
 		expect(Post.count).to eq(1)
-		post = Post.first
+		post = Post.first 
 		expect(post.story).to eq("Hello world!")
 		post.destroy
 		expect(Post.count).to eq(0)

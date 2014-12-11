@@ -9,6 +9,6 @@ end
 
 post '/posts' do
 	story = params[:story]
-	Post.create(:story => story, user_id: user.id)
+	Post.create(story: story, user_id: current_user.id)
 	redirect to ('/')
 end
