@@ -24,6 +24,8 @@ This challenge was set by Makers Academy as a weekend challenge after being intr
 
 * Ruby
 * Sinatra
+* HTML5
+* CSS3
 * RSpec
 * Capybara
 * BCrypt
